@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Ryan Jonah</title>
+    <title>Rewind: A Coding Challenge by Ryan Jonah</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,8 +28,7 @@
     <!-- NAV Section -->
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <div class="container-fluid">
-            <img src="/img/favicon/android-chrome-192x192.png" width="50" alt="Logo" class="d-inline me-2 ms-3">
-            <span class="fw-bold ms-2 fs-2 brand-title">App Name</span>
+            <img src="/img/Rewind_Title.svg" width="200" alt="Logo" class="d-inline ms-3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,7 +48,7 @@
                         <a class="nav-link" href="#" target="_blank">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/RyanJ-NBCC/JsSiteTempate" target="_blank">Git Repo</a>
+                        <a class="nav-link" href="https://github.com/RyanJ-NBCC/Rewind" target="_blank">Git Repo</a>
                     </li>
                 </ul>
             </div>
@@ -57,8 +56,40 @@
     </nav>
 
     <!-- MAIN Section  -->
-    <main class="flex-shrink-0">
-      
+    <main class="flex-shrink-0 mt-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Rewind: There and Back Again</h1>
+                    <h4 class="lead">
+                        A Javascript coding exercise using arrays. Write a program that displays a string in <strong class="fw-bold">reverse</strong>.
+                    </h4>
+
+                </div>
+                <div class="col">
+                    <h5 class="bottom-border">
+                        Enter a string to reverse
+                    </h5>
+                    <div class="row gx-3 gy-2">
+                        <div class="col">
+                            <input type="text" id="userString" class="form-control input-green" placeholder="Enter a string" aria-label="Enter a string">
+                        </div>
+                        <div class="col col-12">
+                            <button type="button" id="Submit" class="button button-green">Reverse Me!</button>
+                            <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
+                                <h4 class="alert-heading">
+                                    Well Done!
+                                </h4>
+                                <hr>
+                                <p class="mb-0" id="message">
+                                    <!-- Insert message here -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- FOOTER Section -->
@@ -69,22 +100,22 @@
                     <span class="text-muted">&copy; 2021 Copyright</span><br> Ryan Jonah | ryan_c_jonah@yahoo.ca
                 </div>
                 <div class="col justify-content-center">
-                    <img height="80px" src="img/Logo-Cropped.PNG">
+                    <img height="80px" src="img/RyanJ_Logo.svg">
                 </div>
                 <div class="col d-flex justify-content-center">
                     <div class="row">                    
                         <div class="col text-green">
-                            <a href="http://www.Facebook.com">
+                            <a href="https://www.facebook.com/Bloodface24/">
                                 <i class="fab fa-facebook fa-2x icon-green"></i>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="http://www.Github.com">
+                            <a href="https://github.com/RyanJ-NBCC/">
                                 <i class="fab fa-github fa-2x icon-green"></i>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="http://www.Linkedin.com">
+                            <a href="https://ca.linkedin.com/in/ryan-jonah-48816a187">
                                 <i class="fab fa-linkedin fa-2x icon-green"></i>
                             </a>
                         </div>
@@ -104,6 +135,9 @@
 
     <!-- External JS -->
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById('Submit').addEventListener("click", getValue);
+    </script>
 </body>
 
 </html>

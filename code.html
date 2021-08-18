@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Ryan Jonah</title>
+    <title>Rewind: A Coding Challenge by Ryan Jonah</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,8 +29,7 @@
     <!-- NAV Section -->
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <div class="container-fluid">
-            <img src="/img/favicon/android-chrome-192x192.png" width="50" alt="Logo" class="d-inline me-2 ms-3">
-            <span class="fw-bold ms-2 fs-2 brand-title">App Name</span>
+            <img src="/img/Rewind_Title.svg" width="200" alt="Logo" class="d-inline ms-3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,7 +49,7 @@
                         <a class="nav-link" href="#" target="_blank">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/RyanJ-NBCC/JsSiteTempate" target="_blank">Git Repo</a>
+                        <a class="nav-link" href="https://github.com/RyanJ-NBCC/Rewind" target="_blank">Git Repo</a>
                     </li>
                 </ul>
             </div>
@@ -65,8 +64,44 @@
                 <div class="col col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            function helloWorld(){
-                                alert("Hello World!");                                
+                            /**
+                            * Get input string from user
+                            * Controller Function
+                            */
+                            function getValue(){
+                                document.getElementById('alert').classList.add('invisible');
+
+                                let userString = document.getElementById('userString').value;
+
+                                let revString = reverseString(userString);
+
+                                displayString(revString);
+                            }
+
+                            /**
+                            * Reverse the string
+                            * Logic Function
+                            */
+                            function reverseString(string){
+                                let revString = [];
+                                
+                                for (let index = string.length-1; index >= 0; index--) {
+                                    revString += string[index];
+                                }
+
+                                return revString;
+                            }
+
+                            /**
+                            * Display message with reversed string
+                            * View Function
+                            */
+                            function displayString(string){
+                                //write message to page 
+                                document.getElementById('message').innerHTML = `Your string reversed is ${string}`;
+
+                                //show the alert box
+                                document.getElementById('alert').classList.remove('invisible');
                             }
                         </code>
                     </pre>
@@ -88,22 +123,22 @@
                     <span class="text-muted">&copy; 2021 Copyright</span><br> Ryan Jonah | ryan_c_jonah@yahoo.ca
                 </div>
                 <div class="col justify-content-center">
-                    <img height="80px" src="img/Logo-Cropped.PNG">
+                    <img height="80px" src="img/RyanJ_Logo.svg">
                 </div>
                 <div class="col d-flex justify-content-center">
                     <div class="row">                    
                         <div class="col text-green">
-                            <a href="http://www.Facebook.com">
+                            <a href="https://www.facebook.com/Bloodface24/">
                                 <i class="fab fa-facebook fa-2x icon-green"></i>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="http://www.Github.com">
+                            <a href="https://github.com/RyanJ-NBCC/">
                                 <i class="fab fa-github fa-2x icon-green"></i>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="http://www.Linkedin.com">
+                            <a href="https://ca.linkedin.com/in/ryan-jonah-48816a187">
                                 <i class="fab fa-linkedin fa-2x icon-green"></i>
                             </a>
                         </div>
